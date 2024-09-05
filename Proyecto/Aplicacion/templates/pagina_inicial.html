@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Gestión de Biblioteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 960px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sistema de Gestión de Biblioteca</h1>
+    </div>
+    <ul>
+        <li><a href="{% url 'agregar_libro' %}">Agregar Libro</a></li>
+        <li><a href="{% url 'registrar_prestamo' %}">Registrar Préstamo</a></li>
+        <li><a href="{% url 'libros_por_categoria' categoria_id=1 %}">Consultar Libros por Categoría</a></li>
+        <li><a href="{% url 'actualizar_devolucion' prestamo_id=1 %}">Actualizar Fecha de Devolución</a></li>
+    </ul>
+</body>
+</html>
